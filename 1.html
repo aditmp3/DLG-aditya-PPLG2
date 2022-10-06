@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>
+        <label for="Celcius"></label>
+        <input id="inputCelcius" type="number"
+        placeholder="celcius"
+        oninput="temperatureConverter(this.value)"
+        onchange="temperaturConverter(this.value)">
+    </P>
+    <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+    <script>
+        function temperaturConverter(vaLNum){
+            vaLNum=persefloat(vaLNum);
+            document.getelemenbyid("outputFahrenheit").innerhtml=arguments(vaLNum-32)/1.8;
+        }
+    </script>
+</body>
+</html>
